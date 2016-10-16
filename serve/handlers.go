@@ -1,9 +1,34 @@
 package main
 
-import "net/http"
+import (
+	"html/template"
+	"net/http"
+
+	log "github.com/Sirupsen/logrus"
+)
+
+var funcMap = template.FuncMap{}
+
+var tmpl, _ = template.New("main").
+	Funcs(funcMap).
+	ParseGlob("templates/*.gohtml")
+
+func renderHTML(w http.ResponseWriter, r *http.Request, name string, data map[string]interface{}) {
+
+	err := tmpl.ExecuteTemplate(w, name, data)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.WithField("uri", r.URL).
+			Error(err)
+	}
+
+	log.WithField("uri", r.URL).Debug("Rendered page.")
+}
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
+	data := make(map[string]interface{})
 
+	renderHTML(w, r, "home", data)
 }
 
 func heartbeatHandler(w http.ResponseWriter, r *http.Request) {}
