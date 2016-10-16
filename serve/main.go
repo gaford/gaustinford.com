@@ -18,6 +18,8 @@ func main() {
 		Methods("GET")
 	r.HandleFunc("/heartbeat", heartbeatHandler).Methods("GET")
 
+	r.NotFoundHandler = http.HandlerFunc(notFoundHandler)
+
 	serve := &http.Server{
 		Addr:         ":8082",
 		Handler:      r,

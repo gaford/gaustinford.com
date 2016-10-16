@@ -17,7 +17,8 @@ func renderHTML(w http.ResponseWriter, r *http.Request, name string, data map[st
 
 	err := tmpl.ExecuteTemplate(w, name, data)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		// http.Error(w, err.Error(), http.StatusInternalServerError)
+		http.ServeFile(w, r, "public/50x.html")
 		log.WithField("uri", r.URL).
 			Error(err)
 	}
@@ -32,3 +33,7 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func heartbeatHandler(w http.ResponseWriter, r *http.Request) {}
+
+func notFoundHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "public/404.html")
+}
