@@ -9,7 +9,7 @@
   margin-top: 6rem;
   text-align: center; }
 .header-small {
-  margin-top: 6rem;
+  margin-top: 4rem;
   text-align: center
 }
 .value-prop {
@@ -98,7 +98,7 @@
   .header {
     margin-top: 18rem; }
   .header-small {
-    margin-top: 6rem;
+    margin-top: 4rem;
     text-align: center
   }
   .value-props {
@@ -239,8 +239,32 @@
 
 /* Custon CSS */
 
+nav {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  text-align: center;
+  // text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .2rem;
+  line-height: 3rem;
+  border-bottom: 1px solid #eee;
+}
+
+nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .contact-container {
   padding-top: 2rem;
+  text-align: center;
+}
+
+.button-container {
   text-align: center;
 }
 
@@ -249,5 +273,15 @@
 }
 .no-underline:hover {
   text-decoration: underline;
+}
+
+h4.section-header {
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+ol.paperlist > li {
+
 }
 

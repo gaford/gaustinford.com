@@ -18,6 +18,18 @@
 <body>
 {{end}}
 
+{{define "nav"}}
+  <nav>
+    <div class="u-pull-left">
+  <a class="no-underline" href="/">g. austin ford</a>
+  </div>
+
+  <div class="u-pull-right">
+  <a class="no-underline" href="/mathematics">math</a> • data • music
+  </div>
+  </nav>
+{{end}}
+
 {{define "foot"}}
 </body>
 </html>
@@ -31,18 +43,8 @@
 
   <section class="header">
   <h2>g. austin ford, ph.d.</h2>
-  <h5 style="margin-top: -10px;"><!-- <a href="/mathematics.html" class="no-underline"> -->mathematician<!-- </a> --> • data scientist • <!-- <a href="/music.html" class="no-underline"> -->composer<!-- </a> --></h5>
+  <h5 style="margin-top: -10px;"><a href="/mathematics" class="no-underline">mathematician</a> • data scientist • <!-- <a href="/music.html" class="no-underline"> -->composer<!-- </a> --></h5>
   </section>
-
-<!--
-  <div class="navbar-spacer"></div>
-  <nav class="navbar">
-    <div class="container">
-      <ul>
-      </ul>
-    </div>
-  </nav>
--->
 
   <div class="contact-container">
   <a class="button button-primary" href="mailto:austin.ford@gmail.com" target="_blank">email</a>
@@ -51,4 +53,61 @@
 </div>
 
   {{template "foot" .}}
+{{end}}
+
+{{define "mathematics"}}
+  {{template "head" .}}
+  {{template "nav" .}}
+
+  <div class="container">
+
+  <section class="header-small">
+  <h2>mathematics</h2>
+  </section>
+
+  <div class="button-container">
+  <a class="button button-primary" href="http://arxiv.org/a/ford_a_1" target="_blank">arXiv</a>
+  <a class="button button-primary" href="http://www.ams.org/mathscinet/search/author.html?mrauthid=909514" target="_blank">MathSciNet</a>
+  </div>
+
+  <section>
+
+  <h4 class="section-header">papers</h4>
+
+  <ol class="paperlist">
+
+  <li value="6"><i>Wave propagation on Euclidean surfaces with conical singularities.  I:  Geometric diffraction</i> (with <a href="http://wwwmaths.anu.edu.au/~hassell/">Andrew Hassell</a> and <a href="http://www.univ-orleans.fr/MAPMO/membres/hillairet/">Luc Hillairet</a>), in press, Journal of Spectral Theory.
+  <!-- <p class="paperabstract"><span style="font-variant: small-caps;">Abstract:</span>   We investigate the singularities of the trace of the half-wave group, $\Tr e^{-it\sqrt\Delta}$, on Euclidean surfaces with conical singularities $(X,g)$.  We compute the leading-order singularity associated to periodic orbits with successive degenerate diffractions.  This result extends the previous work of the third author \cite{Hil} and the two-dimensional case of the work of the first author and Wunsch \cite{ForWun} as well as the seminal result of Duistermaat and Guillemin \cite{DuiGui} in the smooth setting.  As an intermediate step, we identify the wave propagators on $X$ as singular Fourier integral operators associated to intersecting Lagrangian submanifolds, originally developed by Melrose and Uhlmann \cite{MelUhl}.</p> --></li>
+
+  <li value="5"><i>$L^p$-bounds on spectral clusters associated to polygonal domains</i> (with <a href="http://www.math.unm.edu/~blair/">Matthew D. Blair</a> and <a href="http://www.unc.edu/~marzuola/">Jeremy L. Marzuola</a>), in press, Revista Matemática Iberoamericana.
+  <!-- <p class="paperabstract"><span style="font-variant: small-caps;">Abstract:</span>   We look at the $L^p$ bounds on eigenfunctions for polygonal domains (or more generally Euclidean surfaces with conic singularities) by analysis of the wave operator on the flat Euclidean cone $C(\mathbb{S}^1_\rho) \defeq \mathbb{R}_+ \times \left(\mathbb{R} \big/ 2\pi\rho \mathbb{Z}\right)$ of radius $\rho > 0$ equipped with the metric $\h(r,\theta) = \upd r^2 + r^2 \, \upd\theta^2$.  Using explicit oscillatory integrals and relying on the fundamental solution to the wave equation in geometric regions related to flat wave propagation and diffraction by the cone point, we can prove spectral cluster estimates equivalent to those in works on smooth Riemannian manifolds.</p> --></li>
+
+  <li value="4"><i>The diffractive wave trace on manifolds with conic singularities</i> (with <a href="http://math.northwestern.edu/~jwunsch/">Jared Wunsch</a>), Advances in Mathematics <b>304</b> (2017), 1330&ndash;1385.
+  <!-- <p class="paperabstract"><span style="font-variant: small-caps;">Abstract:</span>   Let $(X,g)$ be a compact manifold with conic singularities.  Taking $\Delta_g$ to be the Friedrichs extension of the Laplace-Beltrami operator, we examine the singularities of the trace of the half-wave group $e^{-it \sqrt{\smash[b]{\Delta_g}}}$ arising from strictly diffractive closed geodesics.  Under a generic nonconjugacy assumption, we compute the principal amplitude of these singularities in terms of invariants associated to the geodesic and data from the cone point.  This generalizes the classical theorem of Duistermaat-Guillemin on smooth manifolds and a theorem of Hillairet on flat surfaces with cone points.</p> --></li>
+
+  <li value="3"><i>Strichartz estimates for the wave equation on flat cones</i> (with <a href="http://www.math.unm.edu/~blair/">Matthew D. Blair</a> and <a href="http://www.unc.edu/~marzuola/">Jeremy L. Marzuola</a>), International Mathematics Research Notices (IMRN) <b>2013</b> (2013), no. 3, 525&ndash;547.
+  <!-- <p class="paperabstract"><span style="font-variant:small-caps;">Abstract:</span>  We consider the solution operator for the wave equation on the flat Euclidean cone over the circle of radius rho > 0, the manifold R_+ x R/2pi*rho Z equipped with the metric g(r,theta) = dr^2 + r^2 dtheta^2.  Using explicit representations of the solution operator in regions related to flat wave propagation and diffraction by the cone point, we prove dispersive estimates and hence scale invariant Strichartz estimates for the wave equation on flat cones.  We then show that this yields corresponding inequalities on polygons and Euclidean surfaces with conic singularities. This in turn yields well-posedness results for the nonlinear wave equation on such manifolds.  Morawetz estimates on the cone are also treated.</p> --></li>
+
+  <li value="2"><i>Strichartz estimates for the Schr&ouml;dinger equation on polygonal domains</i> (with <a href="http://www.math.unm.edu/~blair/">Matthew D. Blair</a>, <a href="http://www.math.uni-bonn.de/people/herr/index_engl.html">Sebastian Herr</a>, and <a href="http://www.unc.edu/~marzuola/">Jeremy L. Marzuola</a>), Journal of Geometric Analysis <b>22</b> (2012), no. 2, 339&ndash;351.
+  <!-- <p class="paperabstract"><span style="font-variant: small-caps;">Abstract:</span>  We prove Strichartz estimates with a loss of derivatives for the Schr&ouml;dinger equation on polygonal domains with either Dirichlet or Neumann homogeneous boundary conditions.  Using a standard doubling procedure, estimates on the polygon follow from those on Euclidean surfaces with conical singularities.  We develop a Littlewood-Paley squarefunction estimate with respect to the spectrum of the Laplacian on these spaces.  This allows us to reduce matters to proving estimates at each frequency scale.  The problem can be localized in space provided the time intervals are sufficiently small.  Strichartz estimates then follow from a result of the second author regarding the Schr&ouml;dinger equation on the Euclidean cone.</p> --></li>
+
+  <li value="1"><i>The fundamental solution and Strichartz estimates for the Schr&ouml;dinger equation on flat euclidean cones,</i>  Communications in Mathematical Physics <b>299</b> (2010), no. 2, 447&ndash;467.
+  <!-- <p class="paperabstract"><span style="font-variant: small-caps;">Abstract:</span>  We study the Schr&ouml;dinger equation on a flat euclidean cone R_+ x S^1_rho of cross-sectional radius rho > 0, developing asymptotics for the fundamental solution both in the regime near the cone point and at radial infinity. These asymptotic expansions remain uniform while approaching the intersection of the "geometric front," the part of the solution coming from formal application of the method of images, and the "diffractive front" emerging from the cone tip. As an application, we prove Strichartz estimates for the Schr&ouml;dinger propagator on this class of cones.</p> --></li>
+
+  </ol>
+  </section>
+
+  <section>
+    <h4 class="section-header">thesis</h4>
+
+    <ol class="paperlist" style="list-style-type: upper-alpha;" start="20">
+      <li><i>The Structural and Dispersive Properties of Classical and Quantum Waves on Euclidean Cones.</i></li>
+    </ol>
+  </section>
+
+</div>
+
+
+  {{template "foot" .}}
+
 {{end}}

@@ -21,9 +21,16 @@ func renderHTML(w http.ResponseWriter, r *http.Request, name string, data map[st
 		http.ServeFile(w, r, "public/50x.html")
 		log.WithField("uri", r.URL).
 			Error(err)
+		return
 	}
 
 	log.WithField("uri", r.URL).Debug("Rendered page.")
+}
+
+func heartbeatHandler(w http.ResponseWriter, r *http.Request) {}
+
+func notFoundHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "public/404.html")
 }
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
@@ -32,8 +39,8 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 	renderHTML(w, r, "home", data)
 }
 
-func heartbeatHandler(w http.ResponseWriter, r *http.Request) {}
+func mathHandler(w http.ResponseWriter, r *http.Request) {
+	data := make(map[string]interface{})
 
-func notFoundHandler(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "public/404.html")
+	renderHTML(w, r, "mathematics", data)
 }

@@ -11,6 +11,7 @@ import (
 func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/", homeHandler).Methods("GET")
+	r.HandleFunc("/mathematics", mathHandler).Methods("GET")
 	// This is looking for the asset files near the build binary.
 	publicAssetsPath := "/Users/aford/go/src/github.com/gaford/gaustinford.com/serve/public/assets/"
 	r.PathPrefix("/assets/").
