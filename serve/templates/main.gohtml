@@ -25,7 +25,7 @@
   </div>
 
   <div class="u-pull-right">
-  <a class="no-underline" href="/mathematics">math</a> • data • music
+  <a class="no-underline" href="/mathematics">math</a> • <a class="no-underline" href="/datascience">data</a> • <a class="no-underline" href="/music">music</a>
   </div>
   </nav>
 {{end}}
@@ -43,7 +43,7 @@
 
   <section class="header">
   <h2>g. austin ford, ph.d.</h2>
-  <h5 style="margin-top: -10px;"><a href="/mathematics" class="no-underline">mathematician</a> • data scientist • <!-- <a href="/music.html" class="no-underline"> -->composer<!-- </a> --></h5>
+  <h5 style="margin-top: -10px;"><a href="/mathematics" class="no-underline">mathematician</a> • <a class="no-underline" href="/datascience">data scientist</a> • <a href="/music" class="no-underline">composer</a></h5>
   </section>
 
   <div class="contact-container">
@@ -76,7 +76,7 @@
 
   <ol class="paperlist">
 
-  <li value="6"><i>Wave propagation on Euclidean surfaces with conical singularities.  I:  Geometric diffraction</i> (with <a href="http://wwwmaths.anu.edu.au/~hassell/">Andrew Hassell</a> and <a href="http://www.univ-orleans.fr/MAPMO/membres/hillairet/">Luc Hillairet</a>), in press, Journal of Spectral Theory.
+  <li value="6"><i>Wave propagation on Euclidean surfaces with conical singularities.  I:  Geometric diffraction</i> (with <a href="http://wwwmaths.anu.edu.au/~hassell/">Andrew Hassell</a> and <a href="http://www.univ-orleans.fr/mapmo/membres/hillairet/">Luc Hillairet</a>), in press, Journal of Spectral Theory.
   <!-- <p class="paperabstract"><span style="font-variant: small-caps;">Abstract:</span>   We investigate the singularities of the trace of the half-wave group, $\Tr e^{-it\sqrt\Delta}$, on Euclidean surfaces with conical singularities $(X,g)$.  We compute the leading-order singularity associated to periodic orbits with successive degenerate diffractions.  This result extends the previous work of the third author \cite{Hil} and the two-dimensional case of the work of the first author and Wunsch \cite{ForWun} as well as the seminal result of Duistermaat and Guillemin \cite{DuiGui} in the smooth setting.  As an intermediate step, we identify the wave propagators on $X$ as singular Fourier integral operators associated to intersecting Lagrangian submanifolds, originally developed by Melrose and Uhlmann \cite{MelUhl}.</p> --></li>
 
   <li value="5"><i>$L^p$-bounds on spectral clusters associated to polygonal domains</i> (with <a href="http://www.math.unm.edu/~blair/">Matthew D. Blair</a> and <a href="http://www.unc.edu/~marzuola/">Jeremy L. Marzuola</a>), in press, Revista Matemática Iberoamericana.
@@ -110,4 +110,46 @@
 
   {{template "foot" .}}
 
+{{end}}
+
+{{define "datascience"}}
+  {{template "head" .}}
+  {{template "nav" .}}
+
+  <div class="container">
+
+  <section class="header-small">
+  <h2>data science</h2>
+  </section>
+
+  <div class="button-container">
+  <a class="button button-primary" href="http://github.com/gaford" target="_blank">GitHub</a>
+  </div>
+
+  <div class="header-small">
+  <h4>more to come!</h4>
+  </div>
+
+  {{template "foot" .}}
+{{end}}
+
+{{define "music"}}
+  {{template "head" .}}
+  {{template "nav" .}}
+
+  <div class="container">
+
+  <section class="header-small">
+  <h2>music</h2>
+  </section>
+
+  <div class="button-container">
+  <!-- <a class="button button-primary" href="http://soundcloud.com/gaftastic" target="_blank">Soundcloud</a> -->
+  </div>
+
+  <div class="header-small">
+  <h4>coming soon..</h4>
+  </div>
+
+  {{template "foot" .}}
 {{end}}

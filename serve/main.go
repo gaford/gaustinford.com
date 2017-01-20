@@ -11,11 +11,15 @@ import (
 func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/", homeHandler).Methods("GET")
+	r.HandleFunc("/heartbeat", heartbeatHandler).Methods("GET")
+
 	r.HandleFunc("/mathematics", mathHandler).Methods("GET")
+	r.HandleFunc("/datascience", dataHandler).Methods("GET")
+	r.HandleFunc("/music", musicHandler).Methods("GET")
+
 	r.PathPrefix("/assets/").
 		Handler(http.StripPrefix("/assets/", http.FileServer(http.Dir(Config.PublicAssetsPath)))).
 		Methods("GET")
-	r.HandleFunc("/heartbeat", heartbeatHandler).Methods("GET")
 
 	r.NotFoundHandler = http.HandlerFunc(notFoundHandler)
 

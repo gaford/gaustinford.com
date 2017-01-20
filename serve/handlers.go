@@ -44,3 +44,15 @@ func mathHandler(w http.ResponseWriter, r *http.Request) {
 
 	renderHTML(w, r, "mathematics", data)
 }
+
+func dataHandler(w http.ResponseWriter, r *http.Request) {
+	data := make(map[string]interface{})
+
+	renderHTML(w, r, "datascience", data)
+}
+
+func musicHandler(w http.ResponseWriter, r *http.Request) {
+	data := make(map[string]interface{})
+
+	renderHTML(w, r, "music", data)
+}
