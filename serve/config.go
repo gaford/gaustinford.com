@@ -12,6 +12,7 @@ var configFile = "/etc/gaford/gaustinford.com/gaustinford.com.json"
 // Config is the global configuration struct.
 var Config struct {
 	Domain           string `json:"domain"`
+	Port             string `json:"port"`
 	PublicAssetsPath string `json:"public_assets_path"`
 }
 

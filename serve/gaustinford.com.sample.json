@@ -1,4 +1,5 @@
 {
   "domain": "gaustinford.com",
-  "public_assets_path": "<path-to-public-assets>"
+  "port": "<PORT>",
+  "public_assets_path": "<PATH_TO_PUBLIC_ASSETS>"
 }

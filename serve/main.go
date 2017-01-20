@@ -20,7 +20,7 @@ func main() {
 	r.NotFoundHandler = http.HandlerFunc(notFoundHandler)
 
 	serve := &http.Server{
-		Addr:         ":8082",
+		Addr:         ":" + Config.Port,
 		Handler:      r,
 		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 10 * time.Second,
