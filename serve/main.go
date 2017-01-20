@@ -26,6 +26,6 @@ func main() {
 		WriteTimeout: 10 * time.Second,
 	}
 
-	log.Infof("Listening on port %d...", 8082)
+	log.Infof("Listening on port %s...", Config.Port)
 	log.Fatal(serve.ListenAndServe())
 }
