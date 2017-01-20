@@ -11,7 +11,8 @@ var configFile = "/etc/gaford/gaustinford.com/gaustinford.com.json"
 
 // Config is the global configuration struct.
 var Config struct {
-	Domain string `json:"domain"`
+	Domain           string `json:"domain"`
+	PublicAssetsPath string `json:"public_assets_path"`
 }
 
 func init() {

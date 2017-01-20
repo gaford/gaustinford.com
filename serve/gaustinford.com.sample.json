@@ -1,3 +1,4 @@
 {
-  "domain": "gaustinford.com"
+  "domain": "gaustinford.com",
+  "public_assets_path": "<path-to-public-assets>"
 }
