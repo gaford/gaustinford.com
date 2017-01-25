@@ -22,13 +22,13 @@ func init() {
 		log.WithFields(log.Fields{
 			"configFile": configFile,
 			"error":      err,
-		}).Panic("Configuration failed to load!")
+		}).Fatal("Configuration failed to load!")
 	}
 
 	err = json.Unmarshal(config, &Config)
 	if err != nil {
 		log.WithField("error", err).
-			Panic("Configuration failed to unmarshal!")
+			Fatal("Configuration failed to unmarshal!")
 	}
 
 	log.WithField("configFile", configFile).
